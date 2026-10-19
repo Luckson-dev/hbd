@@ -1,0 +1,40 @@
+# Dépendances
+node_modules/
+
+# Fichiers générés
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Fichiers de compilation et de cache
+*.min.js
+*.min.css
+*.map
+.cache/
+.turbo/
+
+# Fichiers de verrouillage des dépendances
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+bun.lock
+
+# Fichiers d'environnement
+.env
+.env.*
+
+# Fichiers générés par les outils
+next-env.d.ts
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Documentation générée
+docs/generated/
+
+# Journaux
+*.log
