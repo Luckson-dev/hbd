@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, ExternalLink, Sparkles, X, Gift, Heart } from 'lucide-react';
+import { MapPin, ExternalLink, Sparkles, X, Gift, Heart, Home } from 'lucide-react';
 
 export const GiftModal = ({ isOpen, onClose }) => {
+    // Si tu souhaites mettre l'adresse exacte sur la carte Google Maps
     const googleMapsUrl = 'https://maps.google.com/?q=-3.3822,29.3644';
 
     return (
@@ -31,11 +32,11 @@ export const GiftModal = ({ isOpen, onClose }) => {
                         aria-modal="true"
                         aria-labelledby="gift-modal-title"
                     >
-                        {/* Image de couverture */}
+                        {/* Image de couverture - Cocon chaleureux */}
                         <div className="relative h-52 sm:h-60 w-full overflow-hidden">
                             <img
-                                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85"
-                                alt="Hôtel où se retrouver"
+                                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=85"
+                                alt="À la maison ensemble"
                                 className="w-full h-full object-cover"
                             />
 
@@ -54,7 +55,7 @@ export const GiftModal = ({ isOpen, onClose }) => {
                             {/* Petit badge */}
                             <div className="absolute bottom-4 left-5 flex items-center gap-2 bg-white/95 backdrop-blur-sm text-rose-600 text-xs font-semibold px-4 py-2 rounded-full shadow-md">
                                 <Gift className="w-4 h-4" />
-                                Un petit cadeau t'attend
+                                Un moment spécial t'attend
                             </div>
                         </div>
 
@@ -63,68 +64,61 @@ export const GiftModal = ({ isOpen, onClose }) => {
                             {/* Titre */}
                             <div>
                                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-rose-500">
-                                    Une petite rencontre
+                                    Douceur & Complicité
                                 </p>
 
                                 <h2
                                     id="gift-modal-title"
                                     className="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-2"
                                 >
-                                    On se retrouve ici ? 😊
+                                    À la maison ensemble 🏡
                                 </h2>
 
                                 <div className="flex items-start gap-3 mt-4 p-3.5 rounded-2xl bg-rose-50 border border-rose-100">
                                     <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-white text-rose-500 shadow-sm">
-                                        <MapPin className="w-5 h-5" />
+                                        <Home className="w-5 h-5" />
                                     </div>
 
                                     <div>
                                         <p className="font-bold text-slate-800">
-                                            Hôtel Grand Palace & Spa
+                                            Notre Cocon
                                         </p>
 
                                         <p className="text-sm text-slate-500 mt-1">
-                                            124 Avenue de la Plage, Vue sur Mer
+                                            À la maison, au chaud et au calme
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Description simple et naturelle */}
+                            {/* Description personnalisée */}
                             <div className="relative rounded-2xl bg-slate-50 p-4 sm:p-5 border border-slate-100">
                                 <Heart className="absolute top-4 right-4 w-5 h-5 text-rose-300" />
 
                                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed pr-5">
-                                    J'aimerais qu'on se retrouve un petit moment
-                                    pour que je puisse te remettre ton cadeau.
-                                    🎁
+                                    Pas besoin de grand voyage ni d'endroit compliqué...
                                     <br />
                                     <br />
-                                    Rien de compliqué, juste une petite
-                                    rencontre pour partager ce moment ensemble.
+                                    J'ai juste envie qu'on passe ce moment ensemble à la maison pour te donner ton cadeau et fêter ça à notre façon. 🎁✨
                                     <br />
                                     <br />
-                                    J'espère que tu pourras venir. 😊
+                                    Prépare-toi à passer un très beau moment complice ! 😊
                                 </p>
                             </div>
 
-                            {/* Bouton Google Maps */}
-                            <a
-                                href={googleMapsUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            {/* Bouton d'action principal */}
+                            <button
+                                type="button"
+                                onClick={onClose}
                                 className="group w-full py-4 px-5 rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold flex items-center justify-center gap-3 shadow-lg shadow-rose-500/20 hover:shadow-xl hover:shadow-rose-500/30 hover:-translate-y-0.5 transition-all duration-300"
                             >
-                                <MapPin className="w-5 h-5" />
-
-                                <span>Voir l'itinéraire</span>
-
-                                <ExternalLink className="w-4 h-4 ml-auto group-hover:translate-x-0.5 transition-transform" />
-                            </a>
+                                <Sparkles className="w-5 h-5" />
+                                <span>Hâte d'y être ! ❤️</span>
+                            </button>
 
                             {/* Petite note */}
                             <p className="text-center text-xs text-slate-400">
-                                Au plaisir de se retrouver ! 💗
+                                Rien de mieux que d'être ensemble 💗
                             </p>
                         </div>
                     </motion.div>

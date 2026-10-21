@@ -63,7 +63,7 @@ export const WrongChoiceModal = ({ isOpen, onClose }) => {
                         </div>
 
                         <p className="text-white font-medium text-lg">
-                            Mauvais choix ! Tu n'as quand même pas oublié ton
+                            Mauvais choix ! Tu ne connais même pas ton
                             âge ? 😜
                         </p>
 
