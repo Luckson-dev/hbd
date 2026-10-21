@@ -63,7 +63,6 @@ export default function App() {
                                 className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 font-extrabold text-lg text-white shadow-[0_0_30px_rgba(244,114,182,0.6)] flex items-center gap-3 cursor-pointer hover:scale-105 transition-transform"
                             >
                                 <Gift className="w-6 h-6 animate-bounce" />
-                                <span>Obtenir mon cadeau</span>
                             </button>
                         </motion.div>
                     )}
